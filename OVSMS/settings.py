@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'OVSMS',
         'USER': 'root',
-        'PASSWORD': '200141qq',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306'
     }
