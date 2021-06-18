@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for fre in frequencies %}
+        <li>{{ fre.number }}</li>
+        <li>{{ fre.arrivalTime }} </li>
+        <li>{{ fre.departureTime}} </li>
+        <li>{{ fre.line}}</li>
+        <li>{{ fre.car }}</li>
+        <li>{{ fre.driver.name }}</li>
+    {% endfor %}
+</body>
+</html>

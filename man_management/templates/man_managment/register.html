@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <h1>注 册</h1>
+    <form action="/register/" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="请输入用户名"/>
+        <br/>
+        <input type="password" name="password1" placeholder="请输入密码"/>
+        <br/>
+        <input type="password" name="password2" placeholder="请确认密码"/>
+        <br/>
+        <button type="submit">提 交</button>
+        <br/>
+    </form>
+    <div style="margin: 15px 0;height: 1px; background-color: #eee;"></div>
+    <a class="button" href="../">主页</a>
+    <a class="button" href="../login">去登录</a>
+        {% if message %}
+            <script type="text/javascript">
+                alert("{{ message }}");
+            </script>
+        {% endif %}
+</body>
+</html>

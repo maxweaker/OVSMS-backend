@@ -1,0 +1,14 @@
+#创建app
+python manage.py startapp appname
+#创建数据库迁移文件
+python manage.py makemigrations
+#创建表
+python manage.py migrate
+#超级用户注册
+python manage.py createsuperuser
+#启动程序
+python manage.py runserver
+
+#04/24 P139
+
+python manage.py runserver 0.0.0.0:8000

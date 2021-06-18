@@ -1,0 +1,52 @@
+/vehicle_manage/vehicles(get)
+param:{userType:string}
+respond:{vehicles:[{
+        num: string,
+        type: string,
+        load: int,
+        other: string,
+        avl: boolean},{},{}......]}
+（只有userType为“管理员”才返回，否则不返回，下同）
+
+/vehicle_manage/add(post)
+param:{userType:string,newVehicle:{
+        num: string,
+        type: string,
+        load: int,
+        other: string,
+        avl: boolean}}
+respond:{success:boolean}
+（这里车辆编号是主键，如果存在返回失败，否则成功）
+
+/vehicle_manage/delete(post)
+param:{userType:string,num: string}
+respond:{success:boolean}
+（如果存在则删除成功，否则失败）
+
+-----------------------------------------------------------------------------------------------------------------
+
+（跟车的差不多）
+/line_manage/lines(get)
+param:{userType:string}
+respond:{lines:[{
+        num: string,
+        stops:[{name:string},{},{}],
+        other: string,
+        avl: boolean},{},{}......]}
+（只有userType为“管理员”才返回，否则不返回，下同）
+
+/line_manage/add(post)
+param:{userType:string,newLine:{
+        num: string,
+        stops:[{name:string},{},{}],
+        other: string,
+        avl: boolean}}
+respond:{success:boolean}
+（这里路线编号是主键，如果存在返回失败，否则成功）
+（edit和这个一样，url最后换成/edit，然后如果存在就编辑成功，不存在编辑失败）
+
+/line_manage/delete(post)
+param:{userType:string,num: string}
+respond:{success:boolean}
+（如果存在则删除成功，否则失败）
+（跟车的一样）
